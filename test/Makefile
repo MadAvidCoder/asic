@@ -2,7 +2,7 @@
 # See https://docs.cocotb.org/en/stable/quickstart.html for more info
 
 # defaults
-SIM ?= icarus
+SIM = icarus
 FST ?= -fst # Use more efficient FST format
 TOPLEVEL_LANG ?= systemverilog
 SRC_DIR = $(PWD)/../src

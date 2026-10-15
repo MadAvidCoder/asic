@@ -8,7 +8,7 @@ all: debug
 
 %.json: $(VERILOG_SOURCES)
 	rm -f $(OUTPUT).bit $(OUTPUT).config $(OUTPUT).json
-	yosys -p 'synth_ecp5 -top top -json $@' $^
+	yosys -p 'synth_ecp5 -top tt_um_madavidcoder_stopwatch -json $@' $^
 
 %.config: %.json icepi-zero.lpf
 	nextpnr-ecp5 --$(FPGA_SIZE) --package $(PACKAGE) --lpf icepi-zero.lpf --json $< --textcfg $@ # 2> log.txt

@@ -23,7 +23,7 @@ module top (
 
 endmodule */
 
-module top (
+module tt_um_madavidcoder_stopwatch (
     output logic [4:0] led,
     input  logic [1:0] button,
     input  wire        clk
