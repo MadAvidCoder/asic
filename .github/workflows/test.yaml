@@ -23,6 +23,13 @@ jobs:
         shell: bash
         run: pip install -r test/requirements.txt
 
+      - name: Check simulator setup
+        run: |
+          iverilog -V
+          cocotb-config --version
+          cd test
+          make -pn | grep -E '^(SIM|TOPLEVEL_LANG|COMPILE_ARGS|VERILOG_SOURCES) ?[:?+]?='
+
       - name: Run tests
         run: |
           cd test
